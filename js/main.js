@@ -2,6 +2,24 @@ const PLAYER1 = 'X';
 
 const PLAYER2 = 'O';
 
+let winCombos = {
+    0: [0, 1, 2],
+
+    1: [3, 4, 5],
+
+    2: [6, 7, 8],
+
+    3: [0, 3, 6],
+
+    4: [1, 4, 7],
+
+    5: [2, 5, 8],
+
+    6: [0, 4, 8],
+
+    7: [6, 4, 2]
+}
+
 let gameState = {
 
     turnCounter: 0,
@@ -14,7 +32,7 @@ let gameState = {
 function resetBoardState() {
     gameState.boardState = [0, 0, 0, 0, 0, 0, 0, 0, 0];
     gameState.possibleMoves = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-    gameState.turnCounter = 0;
+    gameState.turnCounter = 1;
 }
 
 function playerTurn() {
@@ -41,9 +59,11 @@ function playerMove({
     console.log(gameState.turnCounter)
 }
 
-function checkWinState() {
-    p1 = new Array;
-    p2 = new Array;
+p1 = new Array;
+
+p2 = new Array;
+
+function checkPlayerState() {
     for (i = 0; i < gameState.boardState.length; i++) {
         if (gameState.boardState[i] == PLAYER1) {
                 p1.push(i);
@@ -53,6 +73,16 @@ function checkWinState() {
             continue;
         }
     console.log(p1);
-    console.log(p2)
+    console.log(p2);
+    }
+}
+
+function checkWinState() {
+    for (i = 0; i < 7; i++) {
+        if ((p1.includes(winCombos[i][0])) && (p1.includes(winCombos[i][1])) && (p1.includes(winCombos[i][2]))) {
+            console.log('PLAYER 1 WINS!')
+        } else if ((p2.includes(winCombos[i][0])) && (p2.includes(winCombos[i][1])) && (p2.includes(winCombos[i][2]))) {
+            console.log('PLAYER 2 WINS!')
+        }
     }
 }
