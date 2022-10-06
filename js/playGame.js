@@ -3,7 +3,6 @@ A1.addEventListener('click', () => {
         move: 0,
         element: tile0,
     });
-    // checkPlayerState();
 })
 
 A2.addEventListener('click', () => {
@@ -11,7 +10,6 @@ A2.addEventListener('click', () => {
         move: 1,
         element: tile1,
     });
-    // checkPlayerState();
 })
 
 A3.addEventListener('click', () => {
@@ -19,7 +17,6 @@ A3.addEventListener('click', () => {
         move: 2,
         element: tile2,
     });
-    // checkPlayerState();
 })
 
 B1.addEventListener('click', () => {
@@ -27,7 +24,6 @@ B1.addEventListener('click', () => {
         move: 3,
         element: tile3,
     });
-    // checkPlayerState();
 })
 
 B2.addEventListener('click', () => {
@@ -35,7 +31,6 @@ B2.addEventListener('click', () => {
         move: 4,
         element: tile4,
     });
-    // checkPlayerState();
 })
 
 B3.addEventListener('click', () => {
@@ -43,7 +38,6 @@ B3.addEventListener('click', () => {
         move: 5,
         element: tile5,
     });
-    // checkPlayerState();
 })
 
 C1.addEventListener('click', () => {
@@ -51,7 +45,6 @@ C1.addEventListener('click', () => {
         move: 6,
         element: tile6,
     });
-    // checkPlayerState();
 })
 
 C2.addEventListener('click', () => {
@@ -59,7 +52,6 @@ C2.addEventListener('click', () => {
         move: 7,
         element: tile7,
     });
-    // checkPlayerState();
 })
 
 C3.addEventListener('click', () => {
@@ -67,7 +59,6 @@ C3.addEventListener('click', () => {
         move: 8,
         element: tile8,
     });
-    // checkPlayerState();
 })
 
 resetButton.addEventListener('click', () => {

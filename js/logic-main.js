@@ -43,11 +43,11 @@ function resetBoardState() {
 function playerTurn() {
     if ((gameState.turnCounter % 2) === 0) {
         P1.innerHTML = null;
-        P2.innerHTML = '<h3>P<br>L<br>A<br>Y<br>E<br>R<br>2<h3>'        
+        P2.innerHTML = '<img src=\'./img/Player2.jpg\' class=\'pLogo\' id=\'p2img\'>'        
         return PLAYER2
     } else {
         P2.innerHTML = null;
-        P1.innerHTML = '<h3>P<br>L<br>A<br>Y<br>E<br>R<br>1</h3>'
+        P1.innerHTML = '<img src=\'./img/Player1.jpg\' class=\'pLogo\' id=\'p1img\'>'
         return PLAYER1
     }
 }
@@ -58,20 +58,16 @@ function playerMove({
     element = null,
 }) {
     if (!(gameState.possibleMoves).includes(move)) {
-        console.log('INVALID MOVE')
         return
     } else {
         gameState.boardState.splice(move, 1, player);
         gameState.possibleMoves.splice(move, 1, 'INVALID');
-        element.innerHTML = playerTurn();
+        element.innerHTML = `<video width=\'20%\' class=\'embed-responsive-item\' autoplay><source src=\'./video/draw${playerTurn()}.mp4\' type=\'video/mp4\'></video>`;
         checkPlayerState();
         gameState.turnCounter++
         checkWinState();
         playerTurn();
     }
-    console.log(gameState.boardState)
-    console.log(gameState.possibleMoves)
-    console.log(gameState.turnCounter)
 }
 
 function checkPlayerState() {
@@ -90,23 +86,21 @@ function checkPlayerState() {
             continue;
         }
     }
-    console.log(p1);
-    console.log(p2);
 }
 
 function checkWinState() {
     for (i = 0; i <= 7; i++) {
         if ((p1.includes(winCombos[i][0])) && (p1.includes(winCombos[i][1])) && (p1.includes(winCombos[i][2]))) {
-            console.log('PLAYER 1 WINS!');
-            result.innerHTML = 'PLAYER 1 WINS!';
+            endGame();
+            resultRow.innerHTML = 'PLAYER 1 WINS!';
             return;
         } else if ((p2.includes(winCombos[i][0])) && (p2.includes(winCombos[i][1])) && (p2.includes(winCombos[i][2]))) {
-            console.log('PLAYER 2 WINS!');
-            result.innerHTML = 'PLAYER 2 WINS!';
+            endGame();
+            resultRow.innerHTML = 'PLAYER 2 WINS!';
             return;
         } else if (gameState.turnCounter > 8) {
-            console.log('IT\'S A TIE!');
-            result.innerHTML = 'IT\'S A TIE!';
+            endGame();
+            resultRow.innerHTML = 'IT\'S A TIE!';
             return ;
         }
     }
@@ -123,4 +117,8 @@ function clearBoard() {
     tile7.innerHTML = null;
     tile8.innerHTML = null; 
     result.innerHTML = null;   
+}
+
+function endGame() {
+    gameState.possibleMoves = [];
 }

@@ -4,19 +4,36 @@ const root = createElement({
     parent: body,
 })
 
-const P1 = createElement({
-    cName: 'col-1',
+const titleRow = createElement({
+    cName: 'row justify-content-center',
     parent: root,
+    text: 'THICC-TAC-TOE',
+    eId: 'title',
+})
+
+const rootRow = createElement({
+    cName: 'row justify-content-center',
+    parent: root,
+})
+
+const P1 = createElement({
+    cName: 'col-2',
+    parent: rootRow,
+})
+
+const rootCol = createElement({
+    cName: 'col',
+    parent: rootRow
 })
 
 const rowA = createElement({
-    cName: 'row justify-content-center',
+    cName: 'row gamepad justify-content-center',
     eId: 'rowA',
-    parent: root,
+    parent: rootCol,
 })
 
 const A1 = createElement({
-    cName: 'col-3 tile',
+    cName: 'col-4 tile embed-responsive embed-responsive-1by1',
     eId: 'A1',
     parent: rowA,
 })
@@ -28,7 +45,7 @@ const tile0 = createElement({
 })
 
 const A2 = createElement({
-    cName: 'col-3 tile',
+    cName: 'col-4 tile embed-responsive embed-responsive-1by1',
     eId: 'A2',
     parent: rowA,
 })
@@ -40,7 +57,7 @@ const tile1 = createElement({
 })
 
 const A3 = createElement({
-    cName: 'col-3 tile',
+    cName: 'col-4 tile embed-responsive embed-responsive-1by1',
     eId: 'A3',
     parent: rowA,
 })
@@ -52,18 +69,18 @@ const tile2 = createElement({
 })
 
 const P2 = createElement({
-    cName: 'col-1',
-    parent: root,
+    cName: 'col-2',
+    parent: rootRow,
 })
 
 const rowB = createElement({
-    cName: 'row justify-content-center',
+    cName: 'row gamepad justify-content-center',
     eId: 'rowB',
-    parent: root,
+    parent: rootCol,
 })
 
 const B1 = createElement({
-    cName: 'col-3 tile',
+    cName: 'col-4 tile embed-responsive embed-responsive-1by1',
     eId: 'B1',
     parent: rowB,
 })
@@ -75,7 +92,7 @@ const tile3 = createElement({
 })
 
 const B2 = createElement({
-    cName: 'col-3 tile',
+    cName: 'col-4 tile embed-responsive embed-responsive-1by1',
     eId: 'B2',
     parent: rowB,
 })
@@ -87,7 +104,7 @@ const tile4 = createElement({
 })
 
 const B3 = createElement({
-    cName: 'col-3 tile',
+    cName: 'col-4 tile embed-responsive embed-responsive-1by1',
     eId: 'B3',
     parent: rowB,
 })
@@ -100,13 +117,13 @@ const tile5 = createElement({
 
 
 const rowC = createElement({
-    cName: 'row justify-content-center',
+    cName: 'row gamepad justify-content-center',
     eId: 'rowC',
-    parent: root,
+    parent: rootCol,
 })
 
 const C1 = createElement({
-    cName: 'col-3 tile',
+    cName: 'col-4 tile embed-responsive embed-responsive-1by1',
     eId: 'C1',
     parent: rowC,
 })
@@ -118,7 +135,7 @@ const tile6 = createElement({
 })
 
 const C2 = createElement({
-    cName: 'col-3 tile',
+    cName: 'col-4 tile embed-responsive embed-responsive-1by1',
     eId: 'C2',
     parent: rowC,
 })
@@ -130,7 +147,7 @@ const tile7 = createElement({
 })
 
 const C3 = createElement({
-    cName: 'col-3 tile',
+    cName: 'col-4 tile embed-responsive embed-responsive-1by1',
     eId: 'C3',
     parent: rowC,
 })
@@ -144,29 +161,19 @@ const tile8 = createElement({
 const buttonRow = createElement({
     cName: 'row justify-content-center',
     eId: 'BR',
-    parent: root,
-})
-
-const buttonCol = createElement({
-    cName: 'col-5',
-    eId: 'BC',
-    parent: buttonRow,
+    parent: rootCol,
 })
 
 const resetButton = createElement({
     eType: 'button',
-    cName: 'btn btn-primary btn-lg',
-    text: 'RESTART',
-    parent: buttonCol,
+    cName: 'btn btn-light btn-lg',
+    text: '<h1>RESTART</h1>',
+    eId: 'resetButton',
+    parent: buttonRow,
 })
 
 const resultRow = createElement({
     cName: 'row justify-content-center',
-    parent: root,
-})
-
-const result = createElement({
-    cName: 'col',
-    parent: resultRow,
+    parent: rootCol,
     eId: 'result',
 })

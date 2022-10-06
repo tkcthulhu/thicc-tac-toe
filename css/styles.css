@@ -1,7 +1,59 @@
-.tile {
-    border: 3px;
-    border-color: black;
-    border-style: solid;
-    height: 25vh;
+body {
+    background-color: black;
+    color: white;
 }
 
+#root {
+    margin-top: 5vh;
+}
+
+#title {
+    font-size: larger;
+    margin-bottom: 2.5vh;
+}
+
+.tile {
+    border: 3px;
+    border-color: white;
+    border-style: solid;
+    height: auto;
+    padding:18.75% 1 1;
+    width: 25%;
+}
+
+img {
+    width: 10vw;
+    margin-right: 10px;
+}
+
+video {
+    width:20vw;
+}
+
+#BR {
+    margin-top: 3vh;
+}
+
+#resetButton {
+    width:fit-content;
+}
+
+#result {
+    font-size: 7.5vh;
+}
+
+#A1 {
+    border-radius: 5% 0% 0% 0%;
+}
+
+#A3 {
+    border-radius: 0% 5% 0% 0%;
+}
+
+#C1 {
+    border-radius: 0% 0% 0% 5%;
+}
+
+#C3 {
+    border-radius: 0% 0% 5% 0%;
+}
