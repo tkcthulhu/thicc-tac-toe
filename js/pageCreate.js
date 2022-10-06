@@ -4,6 +4,11 @@ const root = createElement({
     parent: body,
 })
 
+const P1 = createElement({
+    cName: 'col-1',
+    parent: root,
+})
+
 const rowA = createElement({
     cName: 'row justify-content-center',
     eId: 'rowA',
@@ -44,6 +49,11 @@ const tile2 = createElement({
     eType: 'p',
     cName: 'XO',
     parent: A3,
+})
+
+const P2 = createElement({
+    cName: 'col-1',
+    parent: root,
 })
 
 const rowB = createElement({
@@ -129,16 +139,6 @@ const tile8 = createElement({
     eType: 'p',
     cName: 'XO',
     parent: C3,
-})
-
-const P1 = createElement({
-    cName: 'col-1',
-    parent: root,
-})
-
-const P2 = createElement({
-    cName: 'col-1',
-    parent: root,
 })
 
 const buttonRow = createElement({
