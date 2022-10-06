@@ -10,11 +10,6 @@ const rowA = createElement({
     parent: root,
 })
 
-const P1 = createElement({
-    cName: 'col-1',
-    parent: root,
-})
-
 const A1 = createElement({
     cName: 'col-3 tile',
     eId: 'A1',
@@ -49,11 +44,6 @@ const tile2 = createElement({
     eType: 'p',
     cName: 'XO',
     parent: A3,
-})
-
-const P2 = createElement({
-    cName: 'col-1',
-    parent: root,
 })
 
 const rowB = createElement({
@@ -139,6 +129,16 @@ const tile8 = createElement({
     eType: 'p',
     cName: 'XO',
     parent: C3,
+})
+
+const P1 = createElement({
+    cName: 'col-1',
+    parent: root,
+})
+
+const P2 = createElement({
+    cName: 'col-1',
+    parent: root,
 })
 
 const buttonRow = createElement({
