@@ -12,7 +12,7 @@ const rowA = createElement({
 
 const P1 = createElement({
     cName: 'col-1',
-    parent: rowA,
+    parent: root,
 })
 
 const A1 = createElement({
@@ -53,7 +53,7 @@ const tile2 = createElement({
 
 const P2 = createElement({
     cName: 'col-1',
-    parent: rowA,
+    parent: root,
 })
 
 const rowB = createElement({
