@@ -58,21 +58,16 @@ function playerMove({
     element = null,
 }) {
     if (!(gameState.possibleMoves).includes(move)) {
-        console.log('INVALID MOVE')
         return
     } else {
         gameState.boardState.splice(move, 1, player);
         gameState.possibleMoves.splice(move, 1, 'INVALID');
         element.innerHTML = `<video width=\'20%\' class=\'embed-responsive-item\' autoplay><source src=\'./video/draw${playerTurn()}.mp4\' type=\'video/mp4\'></video>`;
-        console.log(playerTurn())
         checkPlayerState();
         gameState.turnCounter++
         checkWinState();
         playerTurn();
     }
-    console.log(gameState.boardState)
-    console.log(gameState.possibleMoves)
-    console.log(gameState.turnCounter)
 }
 
 function checkPlayerState() {
@@ -91,25 +86,20 @@ function checkPlayerState() {
             continue;
         }
     }
-    console.log(p1);
-    console.log(p2);
 }
 
 function checkWinState() {
     for (i = 0; i <= 7; i++) {
         if ((p1.includes(winCombos[i][0])) && (p1.includes(winCombos[i][1])) && (p1.includes(winCombos[i][2]))) {
             endGame();
-            console.log('PLAYER 1 WINS!');
             resultRow.innerHTML = 'PLAYER 1 WINS!';
             return;
         } else if ((p2.includes(winCombos[i][0])) && (p2.includes(winCombos[i][1])) && (p2.includes(winCombos[i][2]))) {
             endGame();
-            console.log('PLAYER 2 WINS!');
             resultRow.innerHTML = 'PLAYER 2 WINS!';
             return;
         } else if (gameState.turnCounter > 8) {
             endGame();
-            console.log('IT\'S A TIE!');
             resultRow.innerHTML = 'IT\'S A TIE!';
             return ;
         }
