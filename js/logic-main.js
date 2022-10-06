@@ -98,7 +98,7 @@ function checkWinState() {
             endGame();
             resultRow.innerHTML = 'PLAYER 2 WINS!';
             return;
-        } else if (gameState.turnCounter > 8) {
+        } else if (gameState.turnCounter > 9) {
             endGame();
             resultRow.innerHTML = 'IT\'S A TIE!';
             return ;
