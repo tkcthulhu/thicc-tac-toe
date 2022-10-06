@@ -97,14 +97,17 @@ function checkPlayerState() {
 function checkWinState() {
     for (i = 0; i <= 7; i++) {
         if ((p1.includes(winCombos[i][0])) && (p1.includes(winCombos[i][1])) && (p1.includes(winCombos[i][2]))) {
+            endGame();
             console.log('PLAYER 1 WINS!');
             result.innerHTML = 'PLAYER 1 WINS!';
             return;
         } else if ((p2.includes(winCombos[i][0])) && (p2.includes(winCombos[i][1])) && (p2.includes(winCombos[i][2]))) {
+            endGame();
             console.log('PLAYER 2 WINS!');
             result.innerHTML = 'PLAYER 2 WINS!';
             return;
         } else if (gameState.turnCounter > 8) {
+            endGame();
             console.log('IT\'S A TIE!');
             result.innerHTML = 'IT\'S A TIE!';
             return ;
@@ -123,4 +126,8 @@ function clearBoard() {
     tile7.innerHTML = null;
     tile8.innerHTML = null; 
     result.innerHTML = null;   
+}
+
+function endGame() {
+    gameState.possibleMoves = [];
 }

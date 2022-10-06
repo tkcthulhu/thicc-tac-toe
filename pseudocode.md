@@ -75,3 +75,7 @@ FUNCTIONS & VARIABLES
     checkWinState
 
         loop through values of winCombos and check them against p1 and p2 to see if any win combos have been achieved
+
+        need to lock the board after a win condition is met
+
+        
