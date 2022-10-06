@@ -177,3 +177,8 @@ const resultRow = createElement({
     parent: rootCol,
     eId: 'result',
 })
+
+// const line = createElement({
+//     parent: body,
+//     eId: 'line'
+// })
