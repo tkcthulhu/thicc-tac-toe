@@ -6,31 +6,30 @@ function aiBoardCheck() {
     console.log(AIARRAY);
     for (let i = 0; i <= 7; i++) {
         if ((AIARRAY.includes(winCombos[i][0])) && (AIARRAY.includes(winCombos[i][1])) && (AIARRAY.includes(winCombos[i][2]))) {
-            console.log('I can beat you')
-            do {
-                let m = 0
+                for (let m = 0; m < 2; m++) {
                 let aiTile = (winCombos[i][m])
                 console.log(aiTile)
                 let tile = document.getElementById(aiTile);
+                if ((gameState.possibleMoves).includes(aiTile)) {
                 aiMove({move: winCombos[i][m], element: tile});
-                m++
+                }
+            }
+                console.log(gameState.turnCounter)
             return;
-            } while ((gameState.turnCounter % 2) === 0) 
-        } else {
+            } else {
             console.log('You might win')
         }
     }
 }
+
+
 
 function aiMove({
     player = playerTurn(),
     move = null,
     element = null,
 }) {
-    if (!(gameState.possibleMoves).includes(move)) {
-        console.log('INVALID')
-        return
-    } else {
+    if ((gameState.turnCounter) % 2 == 0) {
         gameState.boardState.splice(move, 1, player);
         gameState.possibleMoves.splice(move, 1, 'INVALID');
         element.innerHTML = `<video width=\'20%\' class=\'embed-responsive-item\' autoplay><source src=\'./video/draw${playerTurn()}.mp4\' type=\'video/mp4\'></video>`;
@@ -41,4 +40,4 @@ function aiMove({
         console.log(p2)
         console.log(gameState.boardState)
     }
-};
+}
