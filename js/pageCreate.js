@@ -34,7 +34,6 @@ const rowA = createElement({
 
 const A1 = createElement({
     cName: 'col-4 tile embed-responsive embed-responsive-1by1',
-    eId: '0',
     parent: rowA,
 })
 
@@ -42,11 +41,11 @@ const tile0 = createElement({
     eType: 'p',
     cName: 'XO',
     parent: A1,
+    eId: '0',
 })
 
 const A2 = createElement({
     cName: 'col-4 tile embed-responsive embed-responsive-1by1',
-    eId: '1',
     parent: rowA,
 })
 
@@ -54,11 +53,11 @@ const tile1 = createElement({
     eType: 'p',
     cName: 'XO',
     parent: A2,
+    eId: '1',
 })
 
 const A3 = createElement({
     cName: 'col-4 tile embed-responsive embed-responsive-1by1',
-    eId: '2',
     parent: rowA,
 })
 
@@ -66,6 +65,7 @@ const tile2 = createElement({
     eType: 'p',
     cName: 'XO',
     parent: A3,
+    eId: '2',
 })
 
 const P2 = createElement({
@@ -81,7 +81,6 @@ const rowB = createElement({
 
 const B1 = createElement({
     cName: 'col-4 tile embed-responsive embed-responsive-1by1',
-    eId: '3',
     parent: rowB,
 })
 
@@ -89,11 +88,11 @@ const tile3 = createElement({
     eType: 'p',
     cName: 'XO',
     parent: B1,
+    eId: '3',
 })
 
 const B2 = createElement({
     cName: 'col-4 tile embed-responsive embed-responsive-1by1',
-    eId: '4',
     parent: rowB,
 })
 
@@ -101,11 +100,11 @@ const tile4 = createElement({
     eType: 'p',
     cName: 'XO',
     parent: B2,
+    eId: '4',
 })
 
 const B3 = createElement({
     cName: 'col-4 tile embed-responsive embed-responsive-1by1',
-    eId: '5',
     parent: rowB,
 })
 
@@ -113,6 +112,7 @@ const tile5 = createElement({
     eType: 'p',
     cName: 'XO',
     parent: B3,
+    eId: '5',
 })
 
 
@@ -124,7 +124,6 @@ const rowC = createElement({
 
 const C1 = createElement({
     cName: 'col-4 tile embed-responsive embed-responsive-1by1',
-    eId: '6',
     parent: rowC,
 })
 
@@ -132,11 +131,11 @@ const tile6 = createElement({
     eType: 'p',
     cName: 'XO',
     parent: C1,
+    eId: '6',
 })
 
 const C2 = createElement({
     cName: 'col-4 tile embed-responsive embed-responsive-1by1',
-    eId: '7',
     parent: rowC,
 })
 
@@ -144,11 +143,11 @@ const tile7 = createElement({
     eType: 'p',
     cName: 'XO',
     parent: C2,
+    eId: '7',
 })
 
 const C3 = createElement({
     cName: 'col-4 tile embed-responsive embed-responsive-1by1',
-    eId: '8',
     parent: rowC,
 })
 
@@ -156,6 +155,7 @@ const tile8 = createElement({
     eType: 'p',
     cName: 'XO',
     parent: C3,
+    eId: '8',
 })
 
 const buttonRow = createElement({

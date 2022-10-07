@@ -1,12 +1,14 @@
 let AIARRAY = new Array
+let XARRAY = new Array
 
 function aiBoardCheck() {
     checkPlayerState();
     AIARRAY = p2.concat(gameState.possibleMoves).sort();
+    XARRAY = p1.concat(gameState.possibleMoves).sort();
     console.log(AIARRAY);
     for (let i = 0; i <= 7; i++) {
         if ((AIARRAY.includes(winCombos[i][0])) && (AIARRAY.includes(winCombos[i][1])) && (AIARRAY.includes(winCombos[i][2]))) {
-                for (let m = 0; m < 2; m++) {
+                for (let m = 0; m < 3; m++) {
                 let aiTile = (winCombos[i][m])
                 console.log(aiTile)
                 let tile = document.getElementById(aiTile);
