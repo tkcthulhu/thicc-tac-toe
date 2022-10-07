@@ -66,4 +66,8 @@ resetButton.addEventListener('click', () => {
     clearBoard();
 });
 
+aiMoveButton.addEventListener('click', () => {
+    aiBoardCheck();
+})
+
 resetBoardState();
