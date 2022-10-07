@@ -34,7 +34,7 @@ const rowA = createElement({
 
 const A1 = createElement({
     cName: 'col-4 tile embed-responsive embed-responsive-1by1',
-    eId: 'A1',
+    eId: '0',
     parent: rowA,
 })
 
@@ -46,7 +46,7 @@ const tile0 = createElement({
 
 const A2 = createElement({
     cName: 'col-4 tile embed-responsive embed-responsive-1by1',
-    eId: 'A2',
+    eId: '1',
     parent: rowA,
 })
 
@@ -58,7 +58,7 @@ const tile1 = createElement({
 
 const A3 = createElement({
     cName: 'col-4 tile embed-responsive embed-responsive-1by1',
-    eId: 'A3',
+    eId: '2',
     parent: rowA,
 })
 
@@ -81,7 +81,7 @@ const rowB = createElement({
 
 const B1 = createElement({
     cName: 'col-4 tile embed-responsive embed-responsive-1by1',
-    eId: 'B1',
+    eId: '3',
     parent: rowB,
 })
 
@@ -93,7 +93,7 @@ const tile3 = createElement({
 
 const B2 = createElement({
     cName: 'col-4 tile embed-responsive embed-responsive-1by1',
-    eId: 'B2',
+    eId: '4',
     parent: rowB,
 })
 
@@ -105,7 +105,7 @@ const tile4 = createElement({
 
 const B3 = createElement({
     cName: 'col-4 tile embed-responsive embed-responsive-1by1',
-    eId: 'B3',
+    eId: '5',
     parent: rowB,
 })
 
@@ -124,7 +124,7 @@ const rowC = createElement({
 
 const C1 = createElement({
     cName: 'col-4 tile embed-responsive embed-responsive-1by1',
-    eId: 'C1',
+    eId: '6',
     parent: rowC,
 })
 
@@ -136,7 +136,7 @@ const tile6 = createElement({
 
 const C2 = createElement({
     cName: 'col-4 tile embed-responsive embed-responsive-1by1',
-    eId: 'C2',
+    eId: '7',
     parent: rowC,
 })
 
@@ -148,7 +148,7 @@ const tile7 = createElement({
 
 const C3 = createElement({
     cName: 'col-4 tile embed-responsive embed-responsive-1by1',
-    eId: 'C3',
+    eId: '8',
     parent: rowC,
 })
 
@@ -176,4 +176,10 @@ const resultRow = createElement({
     cName: 'row justify-content-center',
     parent: rootCol,
     eId: 'result',
+})
+
+const aiMoveButton = createElement({
+    eType: 'button',
+    parent: root,
+    text: "AI"
 })
