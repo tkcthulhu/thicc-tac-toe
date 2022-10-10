@@ -80,10 +80,9 @@ function checkPlayerState() {
         
         if (gameState.boardState[i] == PLAYER1) {
                 p1.push(i);
+                
          } else if (gameState.boardState[i] == PLAYER2) {
                 p2.push(i);
-        } else {
-            continue;
         }
     }
 }
@@ -98,7 +97,7 @@ function checkWinState() {
             endGame();
             resultRow.innerHTML = 'PLAYER 2 WINS!';
             return;
-        } else if (gameState.turnCounter > 10) {
+        } else if (gameState.turnCounter == 10 ) {
             endGame();
             resultRow.innerHTML = 'IT\'S A TIE!';
             return ;
