@@ -10,7 +10,7 @@ function aiBoardCheck() {
         if (((p2.includes(winCombos[i][0])) && (p2.includes(winCombos[i][1]))) || ((p2.includes(winCombos[i][0])) && (p2.includes(winCombos[i][2]))) || ((p2.includes(winCombos[i][1])) && (p2.includes(winCombos[i][2])))) {
             for (let m = 0; m < 3; m++) {
                 let aiTile = (winCombos[i][m])
-                console.log(winCombos[i])
+                console.log(`[${p1}] [${p2}]`)
                 let tile = document.getElementById(aiTile);
                 if ((gameState.possibleMoves).includes(aiTile)) {
                 aiMove({move: winCombos[i][m], element: tile});
@@ -22,7 +22,7 @@ function aiBoardCheck() {
         if (((XARRAY.includes(winCombos[i][0])) && (XARRAY.includes(winCombos[i][1]))) || ((XARRAY.includes(winCombos[i][0])) && (XARRAY.includes(winCombos[i][2]))) || ((XARRAY.includes(winCombos[i][1])) && (XARRAY.includes(winCombos[i][2])))) {
             for (let m = 0; m < 3; m++) {
                 let aiTile = (winCombos[i][m])
-                console.log(winCombos[i])
+                console.log(`[${p1}] [${p2}]`)
                 let tile = document.getElementById(aiTile);
                 if ((gameState.possibleMoves).includes(aiTile)) {
                 aiMove({move: winCombos[i][m], element: tile});
@@ -34,6 +34,7 @@ function aiBoardCheck() {
         if ((AIARRAY.includes(winCombos[i][0])) && (AIARRAY.includes(winCombos[i][1])) && (AIARRAY.includes(winCombos[i][2]))) {
                 for (let m = 0; m < 3; m++) {
                 let aiTile = (winCombos[i][m])
+                console.log(`[${p1}] [${p2}]`)
                 let tile = document.getElementById(aiTile);
                 if ((gameState.possibleMoves).includes(aiTile)) {
                 aiMove({move: winCombos[i][m], element: tile});
@@ -45,6 +46,7 @@ function aiBoardCheck() {
     for (let i = 0; i < 9; i++) {
         LASTMOVES = gameState.boardState.sort();
         let tile = document.getElementById(LASTMOVES[0]);
+        console.log(`[${p1}] [${p2}]`)
         if ((gameState.possibleMoves).includes(LASTMOVES[0])) {
             aiMove({move: LASTMOVES[0], element: tile});
             }

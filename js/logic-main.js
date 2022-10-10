@@ -80,10 +80,9 @@ function checkPlayerState() {
         
         if (gameState.boardState[i] == PLAYER1) {
                 p1.push(i);
+                
          } else if (gameState.boardState[i] == PLAYER2) {
                 p2.push(i);
-        } else {
-            continue;
         }
     }
 }
